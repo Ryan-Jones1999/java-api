@@ -32,6 +32,8 @@ public class DatabaseConnector {
             conn = DriverManager.getConnection("jdbc:mysql://"
                     + host + "/" + database + "?allowPublicKeyRetrieval=true&useSSL=false", user, password);
 
+            System.out.println(conn);
+            
             return conn;
         } catch (Exception e) {
             throw new DatabaseConnectionException(e);
